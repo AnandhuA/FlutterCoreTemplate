@@ -1,6 +1,6 @@
 # Flutter Starter
 
-A production-ready Flutter starter template with responsive UI, theme management, reusable widgets, extensions, and scalable project architecture.
+A Flutter starter template with responsive UI, theme management and extensions.
 
 ---
 
@@ -9,7 +9,7 @@ A production-ready Flutter starter template with responsive UI, theme management
 - Responsive UI system
 - Dark & Light theme support
 - Context extensions
-- 
+  
 ---
 
 This project is designed to:
