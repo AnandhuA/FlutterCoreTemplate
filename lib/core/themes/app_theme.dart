@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starater/core/themes/app_colors.dart';
+import 'package:flutter_starater/lib/core/themes/app_colors.dart';
 
 class AppTheme {
   //-------------------Light Theme--------------------------

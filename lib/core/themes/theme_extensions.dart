@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starater/core/themes/app_colors.dart';
+import 'package:flutter_starater/lib/core/themes/app_colors.dart';
 
 extension ThemeColors on BuildContext {
   bool get isDarkMode => Theme.of(this).brightness == Brightness.dark;
