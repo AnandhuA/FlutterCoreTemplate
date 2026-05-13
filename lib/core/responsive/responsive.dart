@@ -22,13 +22,12 @@ class Responsive {
 
   bool get isLandscape =>
       MediaQuery.of(context).orientation == Orientation.landscape;
+  // --------- DEVICE TYPE (shortest side = reliable on all orientations) ----------
+  double get shortestSide => MediaQuery.of(context).size.shortestSide;
 
-  // --------- DEVICE TYPE (based on width)  ----------
-  bool get isMobile => width < 600;
-
-  bool get isTablet => width >= 600 && width < 1024;
-
-  bool get isDesktop => width >= 1024;
+  bool get isMobile => shortestSide < 600;
+  bool get isTablet => shortestSide >= 600 && shortestSide < 1024;
+  bool get isDesktop => shortestSide >= 1024;
 
   // ---- width percentage --------
   double w(double percent) => width * percent;
@@ -44,6 +43,14 @@ class Responsive {
     scale = scale.clamp(0.85, 1.25);
 
     return size * scale;
+  }
+
+
+  // --------- RESPONSIVE VALUE PICKER ----------
+  T responsive<T>({required T mobile, T? tablet, T? desktop}) {
+    if (isDesktop && desktop != null) return desktop;
+    if (isTablet && tablet != null) return tablet;
+    return mobile;
   }
 
   // ---WIDTH SPACING (horizontal spacing)
